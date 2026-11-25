@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f3ee;
+  --ink: #1c1917;
+  --accent: #0f6e6b;
+  --accent-hover: #0b5654;
+  --muted: #57534e;
+  --border: rgb(28 25 23 / 16%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-figtree);
+  --font-heading: var(--font-fraunces);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-figtree), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-fraunces), serif;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+@keyframes slide-progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-slide-progress {
+  animation: slide-progress 6.5s linear;
+}
+
+@keyframes workflow-draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.workflow-line {
+  animation: workflow-draw 2.8s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-slide-progress {
+    animation: none;
+    width: 100%;
+  }
+
+  .workflow-line {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
