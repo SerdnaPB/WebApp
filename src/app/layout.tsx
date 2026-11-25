@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className="h-full" data-scroll-behavior="smooth">
+    <html lang="es" className="h-full">
       <body
         className={`${figtree.variable} ${fraunces.variable} flex min-h-full flex-col antialiased`}
       >

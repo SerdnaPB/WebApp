@@ -91,7 +91,7 @@ export function ServiceSlides() {
             className={`absolute inset-0 ${
               instant || reduceMotion
                 ? ""
-                : "transition-transform duration-700 ease-out"
+                : "transition-transform duration-500 ease-out"
             } ${active ? "z-10" : "pointer-events-none"}`}
           >
             <Image

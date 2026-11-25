@@ -21,7 +21,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
 
@@ -80,10 +79,6 @@ h6 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   .animate-slide-progress {
     animation: none;
     width: 100%;
